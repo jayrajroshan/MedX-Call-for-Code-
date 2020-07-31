@@ -1,0 +1,167 @@
+/* navbar css  */
+
+.navbar {
+    transition: all 0.4s;
+    margin-top: 0;
+    /* float: center; */
+}
+
+.navbar .nav-link {
+    color: rgb(255, 255, 255);
+    opacity: 0.8;
+    /* float: center; */
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+    color: rgb(209, 209, 209);
+    text-decoration: none;
+    border-bottom: 3px solid #1f4068;
+    background-color: none;
+}
+
+.logo img {
+    float: left;
+    width: 260px;
+    height: auto;
+    margin-top: 0;
+    opacity: 0.9;
+}
+
+.fa {
+    /* padding: 20px; */
+    font-size: 20px;
+    /* width: 55px; */
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 5px;
+}
+
+.fa-bars {
+    background: transparent;
+    color: white;
+}
+
+@media (max-width: 900px) {
+    #navbarSupportedContent {
+        background: #222831;
+        opacity: 0.7;
+        text-align: right;
+    }
+}
+
+.col-sm-2 .patient-img {
+    border-radius: 10%;
+}
+
+
+/* profile tags  */
+
+
+/* Profile container */
+
+.profile {
+    margin: 20px 0;
+}
+
+
+/* Profile sidebar */
+
+.profile-sidebar {
+    padding: 20px 0 10px 0;
+    background: #fff;
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px #2b2b2b;
+    margin-top: 40px;
+}
+
+.profile-userpic img {
+    float: none;
+    margin: 0 auto;
+    width: 50%;
+    height: 50%;
+    -webkit-border-radius: 50% !important;
+    -moz-border-radius: 50% !important;
+    border-radius: 50% !important;
+}
+
+.profile-usertitle {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.profile-usertitle-name {
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.profile-usertitle-job {
+    text-transform: uppercase;
+    color: grey;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.profile-content {
+    /* padding: 10px; */
+    background: #fff;
+    height: auto;
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px #2b2b2b;
+}
+
+.profile-content .corona-status {
+    padding: 20px;
+    width: auto;
+    background: #fd9dab;
+    height: auto;
+}
+
+.profile-content .vacant-hospitals {
+    padding: 20px;
+    width: auto;
+    background: #fd9dab;
+    height: auto;
+}
+
+.profile-content .vacant-hospitals h3 {
+    font-size: 25px;
+}
+
+.profile-content .vacant-hospitals .hosp-name {
+    font-size: 20px;
+}
+
+.profile-content .corona-status h3 {
+    font-size: 25px;
+}
+
+@media (max-width: 900px) {
+    .profile-content {
+        margin-top: 40px;
+        padding: 20px;
+        background: #fff;
+        height: auto;
+        border: 1px solid;
+        padding: 10px;
+        box-shadow: 5px 10px #2b2b2b;
+    }
+    .profile-content .corona-status h3 {
+        font-size: 20px;
+    }
+    .profile-content .corona-status .doc-name {
+        font-size: 18px;
+    }
+    .profile-content .corona-status .hospital-name {
+        font-size: 20px;
+    }
+}
+
+.fa-circle {
+    color: green;
+}

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEDX | Home</title>
+
+    <!-- css stylesheet -->
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+
+    <!-- bootstrap cdn -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+    <!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
+
+
+    <!-- google fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Open+Sans:ital@0;1&family=Roboto:ital,wght@0,300;0,400;1,300;1,400&family=Ubuntu:ital,wght@0,400;0,500;1,300;1,400&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;1,300;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+
+    <!-- aos stylesheets -->
+    <link rel="stylesheet" type="text/css" href="assets/aos.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- fontawsome  -->
+    <script src="https://kit.fontawesome.com/551e46de4a.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    body {
+        /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/back.jpg'); */
+        background-color: #f8a0ad;
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+    }
+</style>
+
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg py-3">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="assets/logo.png" />
+                    </a>
+                </div>
+                <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                    class="navbar-toggler navbar-toggler-right">
+                    <i class="fa fa-bars"></i>
+                </button>
+
+                <div id="navbarSupportedContent" class="collapse navbar-collapse">
+                    <ul class="navbar-nav ml-auto" id="current">
+                        <li class="nav-item active">
+                            <a href="index.html" class="nav-link text-uppercase font-weight-bold">Corona Profile <span
+                                    class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#about" class="nav-link text-uppercase font-weight-bold">Medical History</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#skills" class="nav-link text-uppercase font-weight-bold">Log out</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- <div class="container" id="item-1">
+        <div class="row">
+            <div class="col-sm-10 col-lg-6" id="patient-name">
+                <left>
+                    <h3>Hi, Corona Singh</h3>
+                </left>
+                <left>
+                    <small><h4 id="patient-hash">#92327498H7U90</h4></small>
+                </left>
+            </div>
+            <div class="circle col-sm-2 col-lg-6" id="patient-img">
+                <img src="assets/robin.png" alt="Profile picture">
+            </div>
+        </div>
+    </div> -->
+    <div class="container">
+        <div class="row profile">
+            <div class="col-md-3">
+                <div class="profile-sidebar">
+                    <!-- SIDEBAR USERPIC -->
+                    <div class="profile-userpic">
+                        <center>
+                            <img src="assets/avatar.png" class="img-responsive" alt="profile-picture">
+                        </center>
+                    </div>
+                    <!-- END SIDEBAR USERPIC -->
+                    <!-- SIDEBAR USER TITLE -->
+                    <div class="profile-usertitle">
+                        <div class="profile-usertitle-name">
+                            Hi, Corona Singh
+                            <span></span>
+                        </div>
+                        <div class="profile-usertitle-job">
+                            #92327498H7U90
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="profile-content">
+                    <div class="corona-status">
+                        <div class="row">
+                            <div class="col-6 col-lg-3">
+                                <h3>
+                                    Date of issue:
+                                </h3>
+                            </div>
+                            <div class="col-6 col-lg-4">
+                                <h3>
+                                    12 July 2020
+                                </h3>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-6">
+                                <h3>Issued by</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <h3 class="doc-name"><em>Dr. Corona Warrior, MBBS MD</em></h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <h3 class="hospital-name">Umbrella Corporation</h3>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-1">
+                                <i class="fas fa-circle safe"></i>
+                            </div>
+                            <div class="col-4">
+                                <h3 class="corona-status-icon">Safe</h3>
+                            </div>
+                        </div>
+                        <br>
+                        <div>
+                        <form method="POST" action="/details">
+                            <center>
+                            <button type="submit" class="btn btn-light" >MORE INFO</button>
+                        </center>
+                        </form>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="vacant-hospitals">
+                        <center>
+                            <h3>VACANT HOSPITALS</h3>
+                        </center>
+                        <br>
+                        <div class="row">
+                            <div class="col-12">
+                                <h4 class="hosp-name">Umbrella Corporation</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <h4 class="hosp-name">Skynet Corporation</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <h4 class="hosp-name">Corona Multispeciality Hospital</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <!-- bootstrap scripts  -->
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+        </script>
+</body>
+</html>

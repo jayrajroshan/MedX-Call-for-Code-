@@ -1,0 +1,397 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEDX | Home</title>
+
+    <!-- css stylesheet -->
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+
+    <!-- bootstrap cdn -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+    <!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
+
+
+    <!-- google fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Open+Sans:ital@0;1&family=Roboto:ital,wght@0,300;0,400;1,300;1,400&family=Ubuntu:ital,wght@0,400;0,500;1,300;1,400&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;1,300;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+
+    <!-- aos stylesheets -->
+    <link rel="stylesheet" type="text/css" href="assets/aos.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- fontawsome  -->
+    <script src="https://kit.fontawesome.com/551e46de4a.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.2.6/dist/web3.min.js"></script>
+  </head>
+<style>
+    body {
+        /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/back.jpg'); */
+        background-color: #f8a0ad;
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+    }
+
+    /* #safe-doc-patient {
+    
+    } */
+</style>
+<body>
+  <script>
+    document.addEventListener('click', function() {
+      
+    const accountAddress ="0xe04078F48A7DfAc7a65De40c6bD053079f0814eD";
+
+
+      if (typeof web3 !== "undefined") {
+          web3 = new Web3(web3.currentProvider);
+      } else {
+          // set the provider you want from Web3.providers
+          web3 = new Web3(new Web3.providers.HttpProvider("http://45.56.121.185:8080"));
+      }
+      web3.eth.defaultAccount = web3.eth.accounts[0];
+
+      var gccg = new web3.eth.Contract(
+          [
+              {
+                  "anonymous": false,
+                  "inputs": [
+                      {
+                          "indexed": true,
+                          "internalType": "uint256",
+                          "name": "_Record_id",
+                          "type": "uint256"
+                      }
+                  ],
+                  "name": "RecordEvent",
+                  "type": "event"
+              },
+              {
+                  "constant": false,
+                  "inputs": [
+                      {
+                          "internalType": "string",
+                          "name": "_name",
+                          "type": "string"
+                      },
+                      {
+                          "internalType": "uint256",
+                          "name": "_age",
+                          "type": "uint256"
+                      },
+                      {
+                          "internalType": "string",
+                          "name": "_gender",
+                          "type": "string"
+                      },
+                      {
+                          "internalType": "string",
+                          "name": "_date",
+                          "type": "string"
+                      },
+                      {
+                          "internalType": "string",
+                          "name": "_issued_by",
+                          "type": "string"
+                      },
+                      {
+                          "internalType": "string",
+                          "name": "_validity",
+                          "type": "string"
+                      },
+                      {
+                          "internalType": "uint256",
+                          "name": "_record_number",
+                          "type": "uint256"
+                      }
+                  ],
+                  "name": "addRecord",
+                  "outputs": [],
+                  "payable": false,
+                  "stateMutability": "nonpayable",
+                  "type": "function"
+              },
+              {
+                  "constant": true,
+                  "inputs": [
+                      {
+                          "internalType": "uint256",
+                          "name": "_record_number",
+                          "type": "uint256"
+                      }
+                  ],
+                  "name": "getNumber",
+                  "outputs": [
+                      {
+                          "internalType": "string",
+                          "name": "",
+                          "type": "string"
+                      },
+                      {
+                          "internalType": "string",
+                          "name": "",
+                          "type": "string"
+                      },
+                      {
+                          "internalType": "string",
+                          "name": "",
+                          "type": "string"
+                      },
+                      {
+                          "internalType": "string",
+                          "name": "",
+                          "type": "string"
+                      }
+                  ],
+                  "payable": false,
+                  "stateMutability": "view",
+                  "type": "function"
+              },
+              {
+                  "constant": true,
+                  "inputs": [],
+                  "name": "getRecord",
+                  "outputs": [
+                      {
+                          "internalType": "uint256[]",
+                          "name": "",
+                          "type": "uint256[]"
+                      },
+                      {
+                          "internalType": "string[]",
+                          "name": "",
+                          "type": "string[]"
+                      },
+                      {
+                          "internalType": "uint256[]",
+                          "name": "",
+                          "type": "uint256[]"
+                      },
+                      {
+                          "internalType": "string[]",
+                          "name": "",
+                          "type": "string[]"
+                      },
+                      {
+                          "internalType": "string[]",
+                          "name": "",
+                          "type": "string[]"
+                      },
+                      {
+                          "internalType": "string[]",
+                          "name": "",
+                          "type": "string[]"
+                      },
+                      {
+                          "internalType": "string[]",
+                          "name": "",
+                          "type": "string[]"
+                      },
+                      {
+                          "internalType": "uint256[]",
+                          "name": "",
+                          "type": "uint256[]"
+                      }
+                  ],
+                  "payable": false,
+                  "stateMutability": "view",
+                  "type": "function"
+              },
+              {
+                  "constant": true,
+                  "inputs": [],
+                  "name": "getRecords",
+                  "outputs": [
+                      {
+                          "components": [
+                              {
+                                  "internalType": "uint256",
+                                  "name": "id",
+                                  "type": "uint256"
+                              },
+                              {
+                                  "internalType": "string",
+                                  "name": "name",
+                                  "type": "string"
+                              },
+                              {
+                                  "internalType": "uint256",
+                                  "name": "age",
+                                  "type": "uint256"
+                              },
+                              {
+                                  "internalType": "string",
+                                  "name": "gender",
+                                  "type": "string"
+                              },
+                              {
+                                  "internalType": "string",
+                                  "name": "date",
+                                  "type": "string"
+                              },
+                              {
+                                  "internalType": "string",
+                                  "name": "issued_by",
+                                  "type": "string"
+                              },
+                              {
+                                  "internalType": "string",
+                                  "name": "validity",
+                                  "type": "string"
+                              },
+                              {
+                                  "internalType": "uint256",
+                                  "name": "record_number",
+                                  "type": "uint256"
+                              }
+                          ],
+                          "internalType": "struct MedX.Record[]",
+                          "name": "",
+                          "type": "tuple[]"
+                      }
+                  ],
+                  "payable": false,
+                  "stateMutability": "view",
+                  "type": "function"
+              },
+              {
+                  "constant": true,
+                  "inputs": [],
+                  "name": "recordCount",
+                  "outputs": [
+                      {
+                          "internalType": "uint256",
+                          "name": "",
+                          "type": "uint256"
+                      }
+                  ],
+                  "payable": false,
+                  "stateMutability": "view",
+                  "type": "function"
+              },
+              {
+                  "constant": true,
+                  "inputs": [
+                      {
+                          "internalType": "uint256",
+                          "name": "",
+                          "type": "uint256"
+                      }
+                  ],
+                  "name": "records",
+                  "outputs": [
+                      {
+                          "internalType": "uint256",
+                          "name": "id",
+                          "type": "uint256"
+                      },
+                      {
+                          "internalType": "string",
+                          "name": "name",
+                          "type": "string"
+                      },
+                      {
+                          "internalType": "uint256",
+                          "name": "age",
+                          "type": "uint256"
+                      },
+                      {
+                          "internalType": "string",
+                          "name": "gender",
+                          "type": "string"
+                      },
+                      {
+                          "internalType": "string",
+                          "name": "date",
+                          "type": "string"
+                      },
+                      {
+                          "internalType": "string",
+                          "name": "issued_by",
+                          "type": "string"
+                      },
+                      {
+                          "internalType": "string",
+                          "name": "validity",
+                          "type": "string"
+                      },
+                      {
+                          "internalType": "uint256",
+                          "name": "record_number",
+                          "type": "uint256"
+                      }
+                  ],
+                  "payable": false,
+                  "stateMutability": "view",
+                  "type": "function"
+              },
+          ],
+          "0xeF1669769e8559952835Da807e1075D294c69ADd" //contract address
+      );
+       
+      var version = web3.version; // "1.0.0"
+      console.log(version);
+
+      gccg.methods.addRecord("Jayraj",22,"Male","8012020","8122020","shreya",1676876).send({ from: accountAddress })
+        .then(function(receipt){
+                console.log(receipt);
+        });
+          
+
+  });              
+</script>
+    <h1 class="d-flex justify-content-center text-white my-4 ">Add a new record</h1>
+
+    <form class="px-4" select id="data">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputName">Name</label>
+            <input type="text" class="form-control" id="inputName" placeholder="Name">
+          </div>
+          <div class="form-group col-sm-6">
+            <label for="inputAge">Age</label>
+            <input type="text" class="form-control" id="inputAge" placeholder="Age">
+          </div>
+          <div class="form-group col-sm-6">
+            <label for="inputGender">Gender</label>
+            <select id="inputGender" class="form-control">
+              <option selected>Female</option>
+              <option>Male</option>
+              <option>Others</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputDate">Issue Date</label>
+            <input type="date" class="form-control" id="inputDate">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputValidity">Valid Till</label>
+            <input type="date" class="form-control" id="inputValidity">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputDoctor">Enter your name</label>
+            <input type="text" class="form-control" id="inputDoctor" placeholder="Doctor's Name">
+          </div>
+
+        </div>
+        <div class="form-group">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck">
+            <label class="form-check-label" for="gridCheck">
+              Enter new record
+            </label>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-success" >Add record</button>
+      </form>
+</body>
+</html>
